@@ -1,0 +1,64 @@
+{
+    "name": "classic-asp-html",
+    "scopeName": "text.html.asp",
+    "displayName": "Classic ASP Syntaxes and Snippets",
+    "icon": "images/classic_asp.png",
+    "description": "Classic ASP Language Support and Snippets from tmBundle",
+    "version": "0.0.1",
+    "publisher": "skyer9",
+    "engines": {
+        "vscode": "^1.14.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/skyer9/vscode-asp-classic"
+    },
+    "bugs": "https://github.com/skyer9/vscode-asp-classic/issues",
+    "categories": [
+        "Languages",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "asp",
+                "aliases": [
+                    "ASP",
+                    "asp"
+                ],
+                "extensions": [
+                    ".asa",
+                    ".asp"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "asp",
+                "scopeName": "text.html.asp",
+                "path": "./syntaxes/asp.html.tmLanguage.json",
+				"embeddedLanguages": {
+                    "text.html.asp": "asp",
+					"text.html": "html",
+					"source.sql": "sql",
+					"text.xml": "xml",
+					"source.js": "javascript",
+					"source.vbs": "vbscript",
+					"source.json": "json",
+					"source.css": "css"
+				}
+            }
+        ],
+        "snippets": [
+            {
+                "language": "asp",
+                "scopeName": "text.html.asp",
+                "path": "./snippets/asp.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "vscode": "^0.11.0"
+    }
+}
